@@ -2,6 +2,7 @@ import React from 'react';
 import './ContentPane.css';
 import { UseStateComponent } from "./UseStateComponent";
 import { UseEffectComponent } from "./UseEffectComponent";
+import { UseContextComponent } from "./UseContextComponent";
 
 interface ContentPaneProps {
     selectedItem: string | null;
@@ -22,6 +23,9 @@ const ContentPane: React.FC<ContentPaneProps> = ({ selectedItem }) => {
             break;
         case 'useEffect':
             content = <UseEffectComponent />;
+            break;
+        case 'useContext':
+            content = <UseContextComponent />;
             break;
         case 'Contact':
             content = <div>Contact content</div>;
