@@ -1,6 +1,7 @@
 # hooks_demo
 
-This project demonstrates the use of React hooks in a modern TypeScript application. It contains several reusable components and examples, making it a great starting point for experimenting with React's powerful state and effect management features.
+This project demonstrates the use of React hooks in a modern TypeScript application. 
+You can expect: a sidebar menu containing a list of hooks, and the right content pane containing the live hook and the source code for the hook component for comparison as you use the hook-based code.
 
 ## Features
 
