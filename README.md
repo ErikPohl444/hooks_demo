@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# hooks_demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates the use of React hooks in a modern TypeScript application. It contains several reusable components and examples, making it a great starting point for experimenting with React's powerful state and effect management features.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Built with React and TypeScript for type safety and modern development experience
+- Includes example components demonstrating `useState` and other hooks
+- Modular component structure under `src/components/`
+- Comes with ready-to-use CSS styling files for each component
+- Includes test setup using React Testing Library and Jest
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js (v16 or newer recommended)
+- npm (v8 or newer) or yarn
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ErikPohl444/hooks_demo.git
+   cd hooks_demo
+   ```
 
-### `npm run build`
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Running the App
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To start the development server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+# or
+yarn start
+```
 
-### `npm run eject`
+This will launch the app locally, usually at [http://localhost:3000](http://localhost:3000).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Running Tests
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run the test suite:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm test
+# or
+yarn test
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Project Structure
 
-## Learn More
+- `src/` — Main source code folder
+  - `App.tsx` — Main application component
+  - `components/` — Contains reusable React components such as `Sidebar`, `ContentPane`, `TextDisplay`, and `UseStateComponent`
+  - `index.tsx` — Entry point for React rendering
+  - CSS and support files for component styling and TypeScript configuration
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+Thanks to all contributors and the open-source React community.
