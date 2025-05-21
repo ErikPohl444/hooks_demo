@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+// App.tsx
+import React, { useState } from 'react';
+import Sidebar from './components/Sidebar';
+import ContentPane from './components/ContentPane';
 import './App.css';
+import TextDisplay from './components/TextDisplay';
 
-function App() {
+// https://medium.com/@AbidKazmi/all-react-hooks-in-one-short-4b0ed4b5a6e4
+
+const App: React.FC = () => {
+  const [selectedItem, setSelectedItem] = useState<string | null>(null);
+
+  const handleItemClick = (item: string) => {
+    setSelectedItem(item);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <Sidebar onItemClick={handleItemClick} />
+      <ContentPane selectedItem={selectedItem} />
+      <TextDisplay filePath={`/CodeSamples/${selectedItem}.txt`} />
     </div>
   );
-}
+};
 
 export default App;
