@@ -3,6 +3,13 @@ import './ContentPane.css';
 import { UseStateComponent } from "./UseStateComponent";
 import { UseEffectComponent } from "./UseEffectComponent";
 import { UseContextComponent } from "./UseContextComponent";
+import { UseReducerComponent } from "./UseReducerComponent";
+import { UseCallbackComponent } from './UseCallbackComponent';
+import { UseMemoComponent } from './UseMemoComponent';
+import { UseLayoutEffectComponent } from './UseLayoutEffectComponent';
+import { UseRefComponent } from './UseRefComponent';
+import { UseDebugValueComponent } from './UseDebugValueComponent';
+import { UseImperativeHandleComponent } from './UseImperativeHandleComponent';
 
 interface ContentPaneProps {
     selectedItem: string | null;
@@ -21,12 +28,32 @@ const ContentPane: React.FC<ContentPaneProps> = ({ selectedItem }) => {
         case 'useState':
             content = <UseStateComponent />;
             break;
+        case 'useMemo':
+            content = <UseMemoComponent a="1" b="2"/>;
+            break;
         case 'useEffect':
             content = <UseEffectComponent />;
             break;
         case 'useContext':
             content = <UseContextComponent />;
             break;
+        case 'useReducer':
+            content = <UseReducerComponent />;
+            break;
+        case 'useRef':
+            content = <UseRefComponent />;
+            break;
+        case 'useLayoutEffect':
+            content = <UseLayoutEffectComponent />;
+            break;
+        case 'useCallback':
+            content = <UseCallbackComponent query="test"/>;
+            break;
+        case 'useDebugValue':
+            content = <UseDebugValueComponent url=""/>;
+            break;
+        case 'useImperativeHandle':
+            content = <UseImperativeHandleComponent />;
         case 'Contact':
             content = <div>Contact content</div>;
             break;
