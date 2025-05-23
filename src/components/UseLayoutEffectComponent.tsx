@@ -3,7 +3,7 @@ import React, { useState, useLayoutEffect, useRef } from 'react';
 export function UseLayoutEffectComponent() {
   const [width, setWidth] = useState(100);
   const [height, setHeight] = useState(100);
-  const boxRef = useRef(null);
+  const boxRef = useRef(document.createElement('div'));
 
   useLayoutEffect(() => {
     const handleResize = () => {
