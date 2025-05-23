@@ -1,29 +1,30 @@
-import React, { useRef, useImperativeHandle } from 'react';
+import React, { useRef, useImperativeHandle } from "react";
 
-const Input = React.forwardRef((props, ref) => {
-  const inputRef = useRef();
+type InputHandle = {
+  focus: () => void;
+  value: string | undefined;
+};
+
+const Input = React.forwardRef<InputHandle, { placeholder?: string }>((props, ref) => {
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useImperativeHandle(ref, () => ({
     focus: () => {
-      inputRef.current.focus();
+      inputRef.current?.focus();
     },
-    value: inputRef.current.value
+    get value() {
+      return inputRef.current?.value;
+    },
   }));
 
-  return (
-    <input
-      type="text"
-      ref={inputRef}
-      placeholder={props.placeholder}
-    />
-  );
+  return <input type="text" ref={inputRef} placeholder={props.placeholder} />;
 });
 
 function UseImperativeHandleComponent() {
-  const inputRef = useRef();
+  const inputRef = useRef<InputHandle>(null);
 
   const handleClick = () => {
-    inputRef.current.focus();
+    inputRef.current?.focus();
   };
 
   return (
