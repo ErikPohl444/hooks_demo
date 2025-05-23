@@ -47,7 +47,7 @@ const ContentPane: React.FC<ContentPaneProps> = ({ selectedItem }) => {
             content = <UseLayoutEffectComponent />;
             break;
         case 'useCallback':
-            content = <UseCallbackComponent query="test"/>;
+            content = <UseCallbackComponent onSearch={(query: string) => { console.log(query); }}/>;
             break;
         case 'useDebugValue':
             content = <UseDebugValueComponent url=""/>;
