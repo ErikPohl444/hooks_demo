@@ -10,7 +10,9 @@ import { UseLayoutEffectComponent } from "./UseLayoutEffectComponent";
 import { UseRefComponent } from "./UseRefComponent";
 import { UseDebugValueComponent } from "./UseDebugValueComponent";
 import UseImperativeHandleComponent  from "./UseImperativeHandleComponent";
-
+import Home from "./Home";
+import About from "./About";
+import Contact from "./Contact";
 interface ContentPaneProps {
   selectedItem: string | null;
 }
@@ -20,10 +22,10 @@ const ContentPane: React.FC<ContentPaneProps> = ({ selectedItem }) => {
 
   switch (selectedItem) {
     case "Home":
-      content = <div>Home content</div>;
+      content = <Home />;
       break;
     case "About":
-      content = <div>About content</div>;
+      content = <About />;
       break;
     case "useState":
       content = <UseStateComponent />;
@@ -62,7 +64,7 @@ case "useDebugValue":
       content = <UseImperativeHandleComponent />;
       break;
     case "Contact":
-      content = <div>Contact content</div>;
+      content = <Contact />;
       break;
     default:
       content = <div>Please select a menu item.</div>;
