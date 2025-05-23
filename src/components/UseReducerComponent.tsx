@@ -1,6 +1,17 @@
 import React, { useReducer } from 'react';
 
-export function UseReducerComponent(state, action) {
+type ItemType = {
+  id: number;
+  name: string;
+  price: number;
+};
+
+type Action =
+  | { type: 'add'; payload: ItemType }
+  | { type: 'remove'; payload: ItemType };
+
+
+function cartReducer(state: ItemType[], action: Action): ItemType[] {
   switch (action.type) {
     case 'add':
       return [...state, action.payload];
@@ -11,14 +22,14 @@ export function UseReducerComponent(state, action) {
   }
 }
 
-function ShoppingCart() {
-  const [cart, dispatch] = useReducer(UseReducerComponent, []);
+export function UseReducerComponent() {
+  const [cart, dispatch] = useReducer(cartReducer, []);
 
-  const addItem = (item) => {
+  const addItem = (item: ItemType) => {
     dispatch({ type: 'add', payload: item });
   }
 
-  const removeItem = (item) => {
+  const removeItem = (item: ItemType) => {
     dispatch({ type: 'remove', payload: item });
   }
 
