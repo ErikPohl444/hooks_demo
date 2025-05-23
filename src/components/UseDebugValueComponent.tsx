@@ -1,6 +1,6 @@
 import { useState, useEffect, useDebugValue } from 'react';
 
-export function UseDebugValueComponent(url: string) {
+export function UseDebugValueComponent({ url }: { url: string }) {
   const [data, setData] = useState("");
 
   useEffect(() => {
@@ -11,5 +11,9 @@ export function UseDebugValueComponent(url: string) {
 
   useDebugValue(data ? `Data loaded: ${data.length} items` : 'Loading...');
 
-  return data;
+  return    (
+    <ul>
+      {data}
+    </ul>
+  );
 }
