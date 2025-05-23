@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
 
 export function UseRefComponent() {
-  const inputRef = useRef(document.createElement('button'));
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleClick = () => {
-    inputRef.current.focus();
+    inputRef.current?.focus();
   }
 
   return (
