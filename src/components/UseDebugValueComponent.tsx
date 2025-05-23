@@ -1,7 +1,7 @@
 import { useState, useEffect, useDebugValue } from 'react';
 
 export function UseDebugValueComponent(url: string) {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState("");
 
   useEffect(() => {
     fetch(url)
