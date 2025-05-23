@@ -18,7 +18,7 @@ const App: React.FC = () => {
     <div className="app-container">
       <Sidebar onItemClick={handleItemClick} />
       <ContentPane selectedItem={selectedItem} />
-      <TextDisplay filePath={`/CodeSamples/${selectedItem}.txt`} />
+      { selectedItem?.startsWith("use") ? <TextDisplay filePath={`/CodeSamples/${selectedItem}.txt`} /> : <p></p>}
     </div>
   );
 };
