@@ -1,6 +1,11 @@
 import React, { useState, useMemo } from 'react';
 
-export function UseMemoComponent({ a, b }: { a: string; b: string }) {
+interface UseMemoComponentProps {
+  a: string | number;
+  b: string | number;
+}
+
+export function UseMemoComponent({ a, b }: UseMemoComponentProps) {
   const result = useMemo(() => {
     console.log('Calculating...');
     return Number(a) * Number(b);

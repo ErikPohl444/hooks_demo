@@ -1,6 +1,10 @@
 import React, { useState, useCallback } from 'react';
 
-export function UseCallbackComponent({ onSearch }: { onSearch: (query: string) => void }) {
+interface UseCallbackComponentProps {
+  onSearch: (query: string) => void;
+}
+
+export function UseCallbackComponent({ onSearch }: UseCallbackComponentProps) {
   const [query, setQuery] = useState('');
 
   const handleQueryChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
