@@ -1,6 +1,10 @@
 import { useState, useEffect, useDebugValue } from 'react';
 
-export function UseDebugValueComponent({ url }: { url: string }) {
+interface UseDebugValueComponentProps {
+  url: string;
+}
+
+export function UseDebugValueComponent({ url }: UseDebugValueComponentProps) {
   const [data, setData] = useState("");
 
   useEffect(() => {
